@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import 'content-form-modifiers';
+@import 'spacing';
+
+:root {
+    --index-low: 999;
+    --index-medium: 9999;
+    --index-high: 99999;
+    --index-overhigh: 999999;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-size: 62.5%;
+}
+
+ul, li {
+    list-style: none;
+}

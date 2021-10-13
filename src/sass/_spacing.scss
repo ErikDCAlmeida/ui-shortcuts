@@ -1,0 +1,26 @@
+:root {
+    --spacing-base: 4px;
+    
+    // Spacing
+    @for $i from 1 through 16 {
+      --spacing-#{$i}: calc(#{$i} * var(--spacing-base));
+    }
+  }
+  
+  // Margin
+  @for $i from 0 through 16 {
+    .mt-#{$i}, .my-#{$i} { margin-top: calc(#{$i} * var(--spacing-base)) !important; }
+    .mb-#{$i}, .my-#{$i} { margin-bottom: calc(#{$i} * var(--spacing-base)) !important; }
+    .ml-#{$i}, .mx-#{$i} { margin-left: calc(#{$i} * var(--spacing-base)) !important; }
+    .mr-#{$i}, .mx-#{$i} { margin-right: calc(#{$i} * var(--spacing-base)) !important; }
+    .ma-#{$i} { margin: calc(#{$i} * var(--spacing-base)) !important; }
+  }
+  
+  // Padding
+  @for $i from 0 through 16 {
+    .pt-#{$i}, .py-#{$i} { padding-top: calc(#{$i} * var(--spacing-base)) !important; }
+    .pb-#{$i}, .py-#{$i} { padding-bottom: calc(#{$i} * var(--spacing-base)) !important; }
+    .pl-#{$i}, .px-#{$i} { padding-left: calc(#{$i} * var(--spacing-base)) !important; }
+    .pr-#{$i}, .px-#{$i} { padding-right: calc(#{$i} * var(--spacing-base)) !important; }
+    .pa-#{$i} { padding: calc(#{$i} * var(--spacing-base)) !important; }
+  }

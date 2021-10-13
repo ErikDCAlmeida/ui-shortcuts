@@ -1,0 +1,220 @@
+// Display
+.flex {
+    display: flex !important;
+}
+.block {
+    display: block !important;
+}
+.inline {
+    display: inline !important;
+}
+.contents {
+    display: contents !important;
+}
+.none {
+    display: none !important;
+}
+
+// Flex Alignments
+.a-start {
+    align-items: flex-start !important;
+}
+.a-end {
+    align-items: flex-end !important;
+}
+.a-center {
+    align-items: center !important;
+}
+.a-stretch {
+    align-items: stretch !important;
+}
+.a-baseline {
+    align-items: baseline !important;
+}
+
+// Flex Self Alignments
+.as-start {
+    align-self: flex-start !important;
+}
+.as-end {
+    align-self: flex-end !important;
+}
+.as-center {
+    align-self: center !important;
+}
+.as-stretch {
+    align-self: stretch !important;
+}
+.as-baseline {
+    align-self: baseline !important;
+}
+
+// Flex Justifies
+.j-start {
+    justify-content: flex-start !important;
+}
+.j-end {
+    justify-content: flex-end !important;
+}
+.j-stretch {
+    justify-content: stretch !important;
+}
+.j-evenly {
+    justify-content: space-evenly !important;
+}
+.j-around {
+    justify-content: space-around !important;
+}
+.j-between {
+    justify-content: space-between !important;
+}
+.j-center {
+    justify-content: center !important;
+}
+
+// Flex Justifies Alignments
+.start-start {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+}
+.start-end {
+    justify-content: flex-start !important;
+    align-items: flex-end !important;
+}
+.start-center {
+    justify-content: flex-start !important;
+    align-items: center !important;
+}
+.center-start {
+    justify-content: center !important;
+    align-items: flex-start !important;
+}
+.center {
+    justify-content: center !important;
+    align-items: center !important;
+}
+.center-end {
+    justify-content: center !important;
+    align-items: flex-end !important;
+}
+.end-start {
+    justify-content: flex-end !important;
+    align-items: flex-start !important;
+}
+.end-center {
+    justify-content: flex-end !important;
+    align-items: center !important;
+}
+.end-end {
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
+}
+
+// Text-align
+.text-l {
+    text-align: left !important;
+}
+.text-c {
+    text-align: center !important;
+}
+.text-j {
+    text-align: justify !important;
+}
+.text-r {
+    text-align: right !important;
+}
+
+// Flexs
+.flex-1 {
+    flex: 1 !important;
+}
+
+.flex-0 {
+    flex: 0 auto !important;
+}
+
+// Position Displays
+.row {
+    flex-direction: row !important;
+}
+.col {
+    flex-direction: column !important;
+}
+.row-r {
+    flex-direction: row-reverse !important;
+}
+.col-r {
+    flex-direction: column-reverse !important;
+}
+
+// Fill Dimensions
+.fill-w {
+  width: 100% !important;
+}
+.fill-h {
+  height: 100% !important;
+}
+.fill-a {
+    @extend .fill-w, fill.h;
+}
+
+// Fill Screen
+.fill-sw {
+  width: 100vw !important;
+}
+.fill-sh {
+  height: 100vh !important;
+}
+.fill-sa {
+    @extend .fill-sw, .fill-sh;
+}
+
+// Text decorations
+$decorations: overline, line-through, underline;
+
+@each $decoration in $decorations {
+  .#{$decoration} {
+    text-decoration: #{$decoration} !important;
+  }
+}
+
+$transforms: uppercase, lowercase, capitalize;
+
+@each $transform in $transforms {
+    .#{$transform} {
+        text-transform: #{$transform} !important;
+    }
+}
+
+// Pointers
+$pointers: auto, default, none, context-menu, help, pointer, progress, wait,
+  cell, crosshair, text, vertical-text, alias, copy, move, no-drop, not-allowed,
+  all-scroll, col-resize, row-resize, n-resize, e-resize, s-resize, w-resize,
+  ne-resize, nw-resize, se-resize, sw-resize, ew-resize, ns-resize, nesw-resize,
+  nwse-resize, zoom-in, zoom-out, grab, grabbing;
+
+@each $pointer in $pointers {
+  .#{$pointer} {
+    cursor: #{$pointer} !important;
+  }
+}
+
+$numbers: 1, 2, 3, 4, 5;
+
+@each $number in $numbers {
+    .border-#{$number} {
+        border: #{$number} + px solid rgb(0, 0, 0) !important;
+        &--top {
+            border-top: #{$number} + px solid rgb(0, 0, 0) !important;
+        }
+        &--left {
+            border-left: #{$number} + px solid rgb(0, 0, 0) !important;
+        }
+        &--bottom {
+            border-bottom: #{$number} + px solid rgb(0, 0, 0) !important;
+        }
+        &--right {
+            border-right: #{$number} + px solid rgb(0, 0, 0) !important;
+        }
+    }
+}
