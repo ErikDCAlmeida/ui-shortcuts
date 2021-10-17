@@ -155,7 +155,7 @@
   height: 100% !important;
 }
 .fill-a {
-    @extend .fill-w, fill.h;
+    @extend .fill-w, .fill-h;
 }
 
 // Fill Screen
