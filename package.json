@@ -1,9 +1,13 @@
 {
   "name": "ui-shortcuts",
   "version": "0.0.2",
+  "author": {
+    "name": "ErikDCAlmeida",
+    "email": "erikdcalmeida@gmail.com"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name ui-shortcuts src/plugin.ts",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
