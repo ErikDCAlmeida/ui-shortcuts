@@ -1,6 +1,6 @@
 {
   "name": "ui-shortcuts",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": {
     "name": "ErikDCAlmeida",
     "email": "erikdcalmeida@gmail.com"
@@ -15,5 +15,8 @@
     "> 1%",
     "last 2 versions",
     "not dead"
+  ],
+  "files": [
+    "dist"
   ]
 }
