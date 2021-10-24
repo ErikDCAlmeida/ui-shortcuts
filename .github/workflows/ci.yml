@@ -3,9 +3,10 @@
 name: UI-Shortcuts Publish
 
 on:
+  workflow_dispatch:
   push:
-    branches:
-      - master
+    tags:
+      - "*"
 
 jobs:
   release:
@@ -14,6 +15,11 @@ jobs:
     steps:
       - name: 🛎 Checkout
         uses: actions/checkout@v2
+
+      - name:
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "12.x"
 
       - name: 🛠 Installing Dependencies
         run: yarn
