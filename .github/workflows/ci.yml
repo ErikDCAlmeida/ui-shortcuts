@@ -15,10 +15,13 @@ jobs:
       - name: 🛎 Checkout
         uses: actions/checkout@v2
 
+      - name: 🛠 Installing Dependencies
+        run: yarn
+
       - name: 🏗️ Build
         run: yarn build
 
       - name: 🚀 Publishing on NPM
         run: yarn publish --access public
         env:
-          NODE_AUTHO_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
