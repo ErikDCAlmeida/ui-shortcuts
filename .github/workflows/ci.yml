@@ -16,6 +16,8 @@ jobs:
 
       - name: ⚙ Configuring Node
         uses: actions/setup-node@v2
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         with:
           node-version: "12.x"
 
@@ -27,5 +29,3 @@ jobs:
 
       - name: 🚀 Publishing on NPM
         run: yarn publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
