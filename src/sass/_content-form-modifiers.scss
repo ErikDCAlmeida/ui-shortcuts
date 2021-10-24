@@ -110,7 +110,7 @@
     align-items: flex-end !important;
 }
 
-// Text-align
+// Text Align
 .text-l {
     text-align: left !important;
 }
@@ -178,6 +178,7 @@ $decorations: overline, line-through, underline;
   }
 }
 
+// Text Transform
 $transforms: uppercase, lowercase, capitalize;
 
 @each $transform in $transforms {
@@ -186,7 +187,7 @@ $transforms: uppercase, lowercase, capitalize;
     }
 }
 
-// Pointers
+// Cursor Pointers
 $pointers: auto, default, none, context-menu, help, pointer, progress, wait,
   cell, crosshair, text, vertical-text, alias, copy, move, no-drop, not-allowed,
   all-scroll, col-resize, row-resize, n-resize, e-resize, s-resize, w-resize,
@@ -199,9 +200,8 @@ $pointers: auto, default, none, context-menu, help, pointer, progress, wait,
   }
 }
 
-$numbers: 1, 2, 3, 4, 5;
-
-@each $number in $numbers {
+// Border Size and Position
+@for $number from 1 through 10 {
     .border-#{$number} {
         border: #{$number} + px solid rgb(0, 0, 0) !important;
         &--top {

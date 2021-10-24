@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import 'font-style';
 @import 'content-form-modifiers';
 @import 'spacing';
 
+// Indexes
 :root {
     --index-low: 999;
     --index-medium: 9999;
@@ -9,6 +10,7 @@
     --index-overhigh: 999999;
 }
 
+// All Elements
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +23,6 @@ html, body {
     width: 100%;
     height: 100%;
     position: relative;
-    font-size: 62.5%;
 }
 
 ul, li {
