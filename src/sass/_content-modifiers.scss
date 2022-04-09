@@ -128,7 +128,6 @@
 .flex-1 {
     flex: 1 !important;
 }
-
 .flex-0 {
     flex: 0 auto !important;
 }
@@ -195,7 +194,7 @@ $pointers: auto, default, none, context-menu, help, pointer, progress, wait,
   nwse-resize, zoom-in, zoom-out, grab, grabbing;
 
 @each $pointer in $pointers {
-  .#{$pointer} {
+  .c-#{$pointer} {
     cursor: #{$pointer} !important;
   }
 }
