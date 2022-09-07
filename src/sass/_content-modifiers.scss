@@ -1,171 +1,169 @@
 // Display
-.flex {
-    display: flex !important;
+$displays: block, inline, inline-block, flex, grid, inline-flex, inline-grid,
+  none;
+
+@each $display in $displays {
+  .#{$display} {
+    display: #{$display} !important;
+  }
 }
-.block {
-    display: block !important;
-}
-.inline {
-    display: inline !important;
-}
-.contents {
-    display: contents !important;
-}
-.none {
-    display: none !important;
+
+$flex: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch,
+  baseline: baseline,
+  evenly: space-evenly,
+  around: space-around,
+  between: space-between,
+  inherit: inherit,
+  initial: initial,
+  unset: unset,
+);
+
+// Flex Justifies
+@each $name, $item in $flex {
+  .j-#{$name} {
+    justify-content: #{$item} !important;
+  }
 }
 
 // Flex Alignments
-.a-start {
-    align-items: flex-start !important;
-}
-.a-end {
-    align-items: flex-end !important;
-}
-.a-center {
-    align-items: center !important;
-}
-.a-stretch {
-    align-items: stretch !important;
-}
-.a-baseline {
-    align-items: baseline !important;
+@each $name, $item in $flex {
+  .a-#{$name} {
+    align-items: #{$item} !important;
+  }
 }
 
 // Flex Self Alignments
-.as-start {
-    align-self: flex-start !important;
-}
-.as-end {
-    align-self: flex-end !important;
-}
-.as-center {
-    align-self: center !important;
-}
-.as-stretch {
-    align-self: stretch !important;
-}
-.as-baseline {
-    align-self: baseline !important;
-}
-
-// Flex Justifies
-.j-start {
-    justify-content: flex-start !important;
-}
-.j-end {
-    justify-content: flex-end !important;
-}
-.j-stretch {
-    justify-content: stretch !important;
-}
-.j-evenly {
-    justify-content: space-evenly !important;
-}
-.j-around {
-    justify-content: space-around !important;
-}
-.j-between {
-    justify-content: space-between !important;
-}
-.j-center {
-    justify-content: center !important;
+@each $name, $item in $flex {
+  .as-#{$name} {
+    align-self: #{$item} !important;
+  }
 }
 
 // Flex Justifies Alignments
 .start {
-    justify-content: flex-start !important;
-    align-items: flex-start !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
 }
+
 .start-end {
-    justify-content: flex-start !important;
-    align-items: flex-end !important;
+  justify-content: flex-start !important;
+  align-items: flex-end !important;
 }
+
 .start-center {
-    justify-content: flex-start !important;
-    align-items: center !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
 }
+
 .center-start {
-    justify-content: center !important;
-    align-items: flex-start !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
 }
+
 .center {
-    justify-content: center !important;
-    align-items: center !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
+
 .center-end {
-    justify-content: center !important;
-    align-items: flex-end !important;
+  justify-content: center !important;
+  align-items: flex-end !important;
 }
+
 .end-start {
-    justify-content: flex-end !important;
-    align-items: flex-start !important;
+  justify-content: flex-end !important;
+  align-items: flex-start !important;
 }
+
 .end-center {
-    justify-content: flex-end !important;
-    align-items: center !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
 }
+
 .end {
-    justify-content: flex-end !important;
-    align-items: flex-end !important;
+  justify-content: flex-end !important;
+  align-items: flex-end !important;
 }
 
 // Text Align
 .text-l {
-    text-align: left !important;
+  text-align: left !important;
 }
+
 .text-c {
-    text-align: center !important;
+  text-align: center !important;
 }
+
 .text-j {
-    text-align: justify !important;
+  text-align: justify !important;
 }
+
 .text-r {
-    text-align: right !important;
+  text-align: right !important;
 }
 
 // Flexs
 .flex-1 {
-    flex: 1 !important;
+  flex: 1 !important;
 }
+
 .flex-0 {
-    flex: 0 auto !important;
+  flex: 0 auto !important;
 }
 
 // Position Displays
 .row {
-    flex-direction: row !important;
+  flex-direction: row !important;
 }
+
 .col {
-    flex-direction: column !important;
+  flex-direction: column !important;
 }
+
 .row-r {
-    flex-direction: row-reverse !important;
+  flex-direction: row-reverse !important;
 }
+
 .col-r {
-    flex-direction: column-reverse !important;
+  flex-direction: column-reverse !important;
 }
 
 // Fill Dimensions
 .fill-w {
   width: 100% !important;
 }
+
 .fill-h {
   height: 100% !important;
 }
+
 .fill-a {
-    @extend .fill-w, .fill-h;
+  @extend .fill-w, .fill-h;
 }
 
 // Fill Screen
 .fill-sw {
   width: 100vw !important;
 }
+
 .fill-sh {
   height: 100vh !important;
 }
+
 .fill-sa {
-    @extend .fill-sw, .fill-sh;
+  @extend .fill-sw, .fill-sh;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
 }
 
 // Text decorations
@@ -181,9 +179,9 @@ $decorations: overline, line-through, underline;
 $transforms: uppercase, lowercase, capitalize;
 
 @each $transform in $transforms {
-    .#{$transform} {
-        text-transform: #{$transform} !important;
-    }
+  .#{$transform} {
+    text-transform: #{$transform} !important;
+  }
 }
 
 // Cursor Pointers
@@ -201,19 +199,29 @@ $pointers: auto, default, none, context-menu, help, pointer, progress, wait,
 
 // Border Size and Position
 @for $number from 1 through 10 {
-    .border-#{$number} {
-        border: #{$number} + px solid rgb(0, 0, 0) !important;
-        &--top {
-            border-top: #{$number} + px solid rgb(0, 0, 0) !important;
-        }
-        &--left {
-            border-left: #{$number} + px solid rgb(0, 0, 0) !important;
-        }
-        &--bottom {
-            border-bottom: #{$number} + px solid rgb(0, 0, 0) !important;
-        }
-        &--right {
-            border-right: #{$number} + px solid rgb(0, 0, 0) !important;
-        }
+  .b-#{$number} {
+    border: #{$number}+ px solid rgb(0, 0, 0) !important;
+
+    &--top {
+      border-top: #{$number}+ px solid rgb(0, 0, 0) !important;
     }
+
+    &--left {
+      border-left: #{$number}+ px solid rgb(0, 0, 0) !important;
+    }
+
+    &--bottom {
+      border-bottom: #{$number}+ px solid rgb(0, 0, 0) !important;
+    }
+
+    &--right {
+      border-right: #{$number}+ px solid rgb(0, 0, 0) !important;
+    }
+  }
+}
+
+@for $number from 1 to 10 {
+  .br-#{$number} {
+    border-radius: #{$number} + px !important;
+  }
 }

@@ -1,32 +1,7 @@
-@import "_colors";
+// @import "_colors";
 @import "_content-modifiers";
 @import "_font-style";
+@import "_reset-css";
+@import "_sizes";
 @import "_spacing";
 @import "_util";
-
-:root {
-  --index-low: 999;
-  --index-medium: 9999;
-  --index-high: 99999;
-  --index-overhigh: 999999;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  text-decoration: none;
-}
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-ul,
-li {
-  list-style: none;
-}

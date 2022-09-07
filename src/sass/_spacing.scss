@@ -24,3 +24,11 @@
   .pr-#{$i}, .px-#{$i} { padding-right: calc(#{$i} * var(--spacing-base)) !important; }
   .pa-#{$i} { padding: calc(#{$i} * var(--spacing-base)) !important; }
 }
+
+// Gap
+@for $i from 0 through 16 {
+  .gap-#{$i} { 
+    display: flex;
+    gap: calc(#{$i} * var(--spacing-base)) !important; 
+  }
+}

@@ -1,0 +1,23 @@
+@import "util";
+
+.uis-size {
+  font-size: em(22);
+  &--xx-small {
+    font-size: em(10);
+  }
+  &--x-small {
+    font-size: em(14);
+  }
+  &--small {
+    font-size: em(18);
+  }
+  &--large {
+    font-size: em(26);
+  }
+  &--x-large {
+    font-size: em(28);
+  }
+  &--xx-large {
+    font-size: em(32);
+  }
+}
